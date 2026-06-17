@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Flavors of the World</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@700&family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-page" id="index-page-body">
+
+
+ <section id="home" class="hero-section">
+   <div class="hero-text-container">
+     <h1 class="hero-title">
+       Flavours of<br>
+       The<br>
+       World
+     </h1>
+     <p class="hero-statement">
+       This website helps Food Technology students by giving them clear, simple information about cultural dishes from around the world.
+     </p>
+    
+     <footer>
+       <img class="footer-osc-logo" src="images/OSC LOGO.png" alt="School Logo">
+     </footer>
+   </div>
+
+
+   <div class="hero-right-container">
+     <nav class="glass-nav">
+       <ul class="nav-links">
+         <li><a href="#home">HOME</a></li>
+         <li><a href="#cultural-cuisine">CULTURAL CUISINE</a></li>
+         <li><a href="recipe.html">RECIPES</a></li>
+         <li><a href="#contact-us">CONTACT US</a></li>
+       </ul>
+     </nav>
+   </div>
+ </section>
+
+
+ <section id="cultural-cuisine" class="cuisines-section">
+   <div class="cuisines-content">
+     <h2 class="section-title">Cultural Cuisines</h2>
+   
+     <div class="cuisines-grid">
+     
+       <div class="cuisine-column">
+         <a href="recipe.html#asian-section" class="region-link"><h3>Asian</h3></a>
+         <ul class="cuisine-list">
+           <li><a href="chinese.html">‣ Chinese</a></li>
+           <li><a href="indian.html">‣ Indian</a></li>
+           <li><a href="japanese.html">‣ Japanese</a></li>
+           <li><a href="korean.html">‣ Korean</a></li>
+           <li><a href="thai.html">‣ Thai</a></li>
+           <li><a href="vietnamese.html">‣ Vietnamese</a></li>
+         </ul>
+       </div>
+
+
+       <div class="cuisine-column">
+         <a href="recipe.html#middle-eastern-section" class="region-link"><h3>Middle Eastern</h3></a>
+         <ul class="cuisine-list">
+           <li><a href="lebanese.html">‣ Lebanese</a></li>
+           <li><a href="turkish.html">‣ Turkish</a></li>
+           <li><a href="persian.html">‣ Iranian</a></li>
+           <li><a href="palestinian.html">‣ Palestinian</a></li>
+           <li><a href="eqyptian.html">‣ Egyptian</a></li>
+         </ul>
+       </div>
+
+
+       <div class="cuisine-column">
+         <a href="recipe.html#european-section" class="region-link"><h3>European</h3></a>
+         <ul class="cuisine-list">
+           <li><a href="france.html">‣ French</a></li>
+           <li><a href="greece.html">‣ Greek</a></li>
+           <li><a href="spain.html">‣ Spanish</a></li>
+           <li><a href="uk.html">‣ British</a></li>
+         </ul>
+       </div>
+
+
+       <div class="cuisine-column">
+         <a href="recipe.html#pasifika-section" class="region-link"><h3>Polynesian</h3></a>
+         <ul class="cuisine-list">
+           <li><a href="maori.html">‣ Maori</a></li>
+           <li><a href="samoan.html">‣ Samoan</a></li>
+           <li><a href="tongan.html">‣ Tongan</a></li>
+           <li><a href="fijian.html">‣ Fijian</a></li>
+           <li><a href="cook-islands.html">‣ Cook Island</a></li>
+         </ul>
+       </div>
+
+
+       <div class="cuisine-column">
+         <a href="recipe.html#african-section" class="region-link"><h3>African</h3></a>
+         <ul class="cuisine-list">
+           <li><a href="nigerian.html">‣ Nigerian</a></li>
+           <li><a href="kenya.html">‣ Kenyan</a></li>
+           <li><a href="ethopian.html">‣ Ethiopian</a></li>
+           <li><a href="south-africa.html">‣ South African</a></li>
+         </ul>
+       </div>
+
+
+     </div>
+   </div>
+ </section>
+
+
+ <section id="contact-us" class="contact-segmented">
+   <div class="title-container">
+     <h1 class="main-title">Contact Us</h1>
+   </div>
+  
+   <div class="contact-split-container">
+    
+     <div class="contact-image-placeholder">
+       <iframe
+         src="https://maps.google.com/maps?q=Ormiston%20Senior%20College,%20Auckland&t=k&z=17&output=embed"
+         allowfullscreen=""
+         loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade">
+       </iframe>
+     </div>
+   
+     <form class="contact-form-box">
+       <div class="form-group">
+         <input type="text" placeholder="Your Name" required>
+       </div>
+       <div class="form-group">
+         <input type="email" placeholder="Your Email" required>
+       </div>
+       <div class="form-group">
+         <textarea placeholder="Your Message" required></textarea>
+       </div>
+       <button type="submit">Submit</button>
+     </form>
+
+
+     <div id="form-success-message"></div>
+   </div>
+ </section>
+
+
+ <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,959 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+body,
+html {
+ width: 100%;
+ overflow-x: hidden;
+}
+
+body {
+ background:
+   linear-gradient(rgba(74, 14, 23, 0.55), rgba(30, 4, 8, 0.85)),
+   url("images/dumplings.png") center/cover no-repeat fixed;
+ font-family: "Playfair Display", Georgia, serif;
+ color: #fff;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+h1, h2, h3, .hero-title, .section-title, .main-title, .recipe-hero-title {
+ font-family: "Dancing Script", cursive !important;
+ font-style: normal !important;
+ font-weight: 200 !important;
+}
+
+header,
+.main-nav-header {
+ display: flex !important;
+ justify-content: space-between !important;
+ align-items: center !important;
+ padding: 25px 6% !important;
+ text-transform: uppercase !important;
+ font-size: 0.85rem !important;
+ letter-spacing: 3px !important;
+ position: fixed !important;
+ top: 0 !important;
+ left: 0 !important;
+ width: 100% !important;
+ z-index: 99999 !important;
+ background: rgba(74, 14, 23, 0.98) !important;
+ backdrop-filter: blur(10px) !important;
+ -webkit-backdrop-filter: blur(10px) !important;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+header .nav-links {
+ display: flex !important;
+ justify-content: space-between !important;
+ width: 100% !important;
+ gap: 20px !important;
+}
+
+header .nav-links li {
+ flex: 1 !important;
+ text-align: center !important;
+}
+
+header .nav-links a {
+ font-family: "Montserrat", sans-serif !important;
+ font-weight: 300 !important;
+ font-size: 1.1rem !important;
+ text-transform: uppercase !important;
+ color: #fff !important;
+ text-decoration: none !important;
+ transition: opacity 0.3s !important;
+ display: block !important;
+}
+
+header .nav-links a:hover {
+ opacity: 0.7 !important;
+}
+
+.cuisine-column h3 {
+ font-family: "Lora", serif !important;
+ text-transform: none !important;
+ font-size: 1.8rem;
+ font-weight: 700;
+ margin-bottom: 20px;
+ color: #fff;
+ letter-spacing: 2px;
+}
+
+.recipe-section h2 {
+ font-family: "Lora", serif !important;
+ text-transform: none !important;
+ font-size: 1.9rem;
+ color: #fff;
+ margin-bottom: 20px;
+ letter-spacing: 1px;
+ font-weight: 600;
+}
+
+.header-right,
+.header-title,
+.asia-map {
+ display: none !important;
+}
+
+.hero-section {
+ background: url("images/index-wallpaper.png") center/cover no-repeat fixed;
+ height: 100vh;
+ width: 100%;
+ padding: 0 8%;
+ display: grid;
+ grid-template-columns: 1.3fr 1fr;
+ align-items: center;
+}
+
+.hero-text-container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ height: 80%;
+ position: relative;
+}
+
+.hero-title {
+ font-size: 5.5rem;
+ line-height: 1.05;
+ margin-bottom: 28px;
+ letter-spacing: 4px;
+ text-transform: none !important;
+}
+
+.hero-statement {
+ font-family: "Montserrat", sans-serif;
+ font-size: 1.05rem;
+ font-weight: 200;
+ color: #fff;
+ line-height: 1.7;
+ max-width: 520px;
+ opacity: 0.9;
+}
+
+.hero-footer {
+ display: flex;
+ justify-content: flex-start;
+ width: 100%;
+}
+
+.footer-logo {
+ max-width: 140px;
+ margin-top: 40px;
+ opacity: 0.85;
+ filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.hero-right-container {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.glass-nav {
+ background: rgba(255, 191, 145, 0.18);
+ backdrop-filter: blur(16px);
+ -webkit-backdrop-filter: blur(16px);
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ border-radius: 24px;
+ padding: 60px 45px;
+ width: 100%;
+ max-width: 310px;
+ box-shadow: 0 10px 35px rgba(0, 0, 0, 0.185);
+}
+
+.glass-nav .nav-links {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 35px;
+ text-align: center;
+ width: auto !important;
+}
+
+.glass-nav .nav-links li {
+ flex: none !important;
+ text-align: center !important;
+}
+
+.glass-nav .nav-links a {
+ font-family: "Montserrat", sans-serif !important;
+ text-decoration: none !important;
+ color: #fff !important;
+ font-size: 0.9rem !important;
+ font-weight: 300 !important;
+ letter-spacing: 3px !important;
+ transition: all 0.4s ease !important;
+ opacity: 0.85 !important;
+ display: block !important;
+ text-transform: uppercase !important;
+}
+
+.glass-nav .nav-links a:hover {
+ opacity: 1 !important;
+ letter-spacing: 4.5px !important;
+ text-shadow: 0 0 8px rgba(255, 255, 255, 0.6) !important;
+}
+
+#index-page-body #home footer {
+ background: transparent !important;
+ background-color: transparent !important;
+ border-top: none !important;
+ box-shadow: none !important;
+ padding: 30px 0 30px 0 !important;
+ display: flex !important;
+ justify-content: flex-start !important;
+ align-items: flex-start !important;
+}
+
+.cuisines-section {
+ background: linear-gradient(rgba(74, 14, 23, 0.45), rgba(30, 4, 8, 0.75)),
+             url("https://media.istockphoto.com/id/497186232/photo/indian-spices-in-wooden-trays.jpg?s=612x612&w=0&k=20&c=JXv3WFsyPZ8s21FEDQ_YexvMSeOd9r3yGWd1JY8UTrg=") center/cover no-repeat fixed;
+ min-height: 100vh;
+ width: 100%;
+ padding: 120px 6% 80px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.cuisines-content {
+ width: 100%;
+}
+
+.section-title {
+ font-size: 4.5rem;
+ letter-spacing: 5px;
+ margin-bottom: 60px;
+ line-height: 1.1;
+ text-transform: none !important;
+}
+
+.cuisines-grid {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 25px;
+ width: 100%;
+}
+
+.region-link {
+ text-decoration: none;
+ display: inline-block;
+}
+
+.region-link:hover h3 {
+ color: #ffbf91;
+ text-shadow: 0 0 8px rgba(255, 191, 145, 0.4);
+}
+
+.cuisine-list {
+ list-style: none;
+}
+
+.cuisine-list li {
+ margin-bottom: 12px;
+}
+
+.cuisine-list a {
+ font-family: "Montserrat", sans-serif;
+ text-decoration: none;
+ color: #fff;
+ font-size: 0.95rem;
+ font-weight: 200;
+ opacity: 0.75;
+ transition: all 0.3s ease;
+ display: inline-block;
+}
+
+.cuisine-list a:hover {
+ opacity: 1;
+ padding-left: 6px;
+ color: #ffbf91;
+}
+
+body:not([id*="-page"]) {
+ background: #4A0E17 !important;
+}
+
+main {
+ flex-grow: 1;
+ padding: 160px 5% 40px !important;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.title-container {
+ text-align: center;
+ margin-bottom: 40px;
+ width: 100%;
+}
+
+.main-title {
+ font-size: 3rem;
+ letter-spacing: 6px;
+ color: #fff;
+ margin-bottom: 5px;
+ text-transform: none !important;
+}
+
+.recipe-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 25px;
+ width: 100%;
+ max-width: 1200px;
+ justify-content: center !important;
+}
+
+.recipe-card {
+ background: rgba(255, 255, 255, 0.05);
+ border: 1px solid rgba(255, 255, 255, 0.15);
+ border-radius: 8px;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ text-decoration: none;
+ transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ aspect-ratio: 3 / 4;
+}
+
+.recipe-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+ border-color: rgba(255, 191, 145, 0.4);
+}
+
+.recipe-image {
+ width: 100%;
+ height: 78%;
+ object-fit: cover;
+}
+
+.recipe-name {
+ height: 22%;
+ background: rgba(255, 191, 145, 0.15);
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ border-top: 1px solid rgba(255, 255, 255, 0.15);
+ color: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 5px 10px;
+ font-family: "Montserrat", sans-serif !important;
+ font-weight: 200 !important;
+ font-size: 1.1rem !important;
+ text-transform: none !important;
+ letter-spacing: 1px !important;
+}
+
+.flag-badge {
+ position: absolute;
+ top: 12px;
+ left: 12px;
+ width: 40px;
+ height: 26px;
+ object-fit: cover;
+ border-radius: 8px;
+ box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+ border: 1px solid rgba(255, 255, 255, 0.25);
+ z-index: 10;
+}
+
+.recipe-page-section {
+ min-height: 100vh;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ position: relative;
+}
+
+.recipe-split-container {
+ display: grid;
+ grid-template-columns: 1.1fr 1fr;
+ width: 100%;
+ min-height: 100vh;
+ padding: 160px 6% 60px !important;
+ margin: 0;
+ flex-grow: 1;
+ align-items: center;
+ gap: 5%;
+}
+
+.recipe-hero-side {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ gap: 25px;
+ position: relative;
+ z-index: 10;
+}
+
+.recipe-flag-badge {
+ width: 55px;
+ height: 35px;
+ object-fit: cover;
+ border-radius: 8px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ display: block !important;
+ visibility: visible !important;
+ margin-bottom: 5px;
+}
+
+.recipe-hero-title {
+ font-size: 5.5rem;
+ letter-spacing: 6px;
+ color: #fff;
+ line-height: 1.05;
+ text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.6);
+ text-transform: none !important;
+}
+
+.recipe-card-panel {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+}
+
+.glass-recipe-container {
+ background: #4A0E17;
+ border: 1px solid rgba(255, 255, 255, 0.15);
+ border-radius: 24px;
+ padding: 50px;
+ width: 100%;
+ max-width: 600px;
+ box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+ backdrop-filter: none !important;
+ -webkit-backdrop-filter: none !important;
+}
+
+.recipe-meta-clean {
+ display: flex;
+ margin-bottom: 35px;
+}
+
+.meta-badge {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ background: rgba(255, 255, 255, 0.08);
+ padding: 10px 20px;
+ border-radius: 30px;
+ font-family: "Montserrat", sans-serif;
+ font-size: 0.85rem;
+ letter-spacing: 1.5px;
+ font-weight: 300;
+ color: #fff;
+}
+
+.recipe-section {
+ margin-bottom: 40px;
+}
+
+.recipe-list-content,
+.recipe-steps-content {
+ font-family: "Montserrat", sans-serif !important;
+ font-size: 1.05rem !important;
+ line-height: 1.7 !important;
+ font-weight: 200 !important;
+ padding-left: 20px !important;
+ color: #fff !important;
+ opacity: 0.9;
+}
+
+.recipe-list-content li {
+ margin-bottom: 10px;
+ list-style-type: square;
+}
+
+.recipe-steps-content {
+ list-style-type: none;
+}
+
+.recipe-steps-content li {
+ margin-bottom: 16px;
+}
+
+footer,
+.recipe-footer-brand {
+ background: #4A0E17 !important;
+ background-color: #4A0E17 !important;
+ width: 100% !important;
+ display: flex !important;
+ flex-direction: column !important;
+ align-items: center !important;
+ justify-content: center !important;
+ padding: 40px 6% !important;
+ position: relative !important;
+ z-index: 30 !important;
+ border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+footer .footer-osc-logo,
+.recipe-footer-brand .footer-osc-logo {
+ max-width: 120px !important;
+ height: auto !important;
+ opacity: 0.9;
+ display: block !important;
+ margin: 0 !important;
+}
+
+.footer-brand,
+.recipe-footer-brand .footer-brand {
+ display: none !important;
+}
+
+.section-segmented {
+ width: 100%;
+ padding: 80px 5% 40px;
+ display: flex;
+ flex-direction: column;
+ align-items: center; 
+}
+
+.section-segmented .recipe-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 25px;
+ width: 100%;
+ max-width: 1200px;
+ justify-content: center;
+}
+
+.section-segmented .title-container {
+ text-align: center;
+ margin-bottom: 40px;
+ width: 100%;
+ max-width: 250px;
+}
+
+#chinese-page #dumpling-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/d9/28/ac/d928ac5f5e01f32bd1709556b0ce695f.jpg") center/cover no-repeat fixed !important;
+}
+#chinese-page #mapo-tofu-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/44/9c/c9/449cc98313f9923112000ca112cbbe9e.jpg") center/cover no-repeat fixed !important;
+}
+#indian-page #butter-chicken-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.wellplated.com/wp-content/uploads/2019/07/Slow-Cooker-Butter-Chicken-and-Veggies-scaled.jpg") center/cover no-repeat fixed !important;
+}
+#indian-page #butter-paneer-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.eitanbernath.com/wp-content/uploads/2020/05/Butter-Paneer-1-4x5-LOW-RES.jpeg") center/cover no-repeat fixed !important;
+}
+#japanese-page #sushi-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/originals/ef/ca/26/efca2616e091e0d86892c94961c0be61.jpg") center/cover no-repeat fixed !important;
+}
+#japanese-page #miso-soup-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://maesmenu.com/wp-content/uploads/2023/04/chicken-miso-soup-8.jpg") center/cover no-repeat fixed !important;
+}
+#korean-page #bibimbap-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/8c/b1/4b/8cb14b9f6ccde7a03586e033a9c29e60.jpg") center/cover no-repeat fixed !important;
+}
+#korean-page #kimchi-rice-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://fullofplants.com/wp-content/uploads/2023/08/vegan-kimchi-fried-rice-spicy-korean-inspired-dish-1.jpg") center/cover no-repeat fixed !important;
+}
+#thai-page #pad-thai-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://thesassyfoodie.com/wp-content/uploads/2023/09/spicy-chicken-pad-thai-10.jpg") center/cover no-repeat fixed !important;
+}
+#thai-page #green-curry-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=600&auto=format&fit=crop") center/cover no-repeat fixed !important;
+}
+#vietnamese-page #pho-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/70/16/76/7016762e08c0cafff80c34835c2d86e9.jpg") center/cover no-repeat fixed !important;
+}
+#vietnamese-page #banh-mi-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://thehiddenveggies.com/wp-content/uploads/2023/07/tofu-bahn-mi-3.jpg") center/cover no-repeat fixed !important;
+}
+#lebanese-page #hummus-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/f2/a0/be/f2a0bebb9bf3629ffbf621d70780eebc.jpg") center/cover no-repeat fixed !important;
+}
+#lebanese-page #shawarma-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://static.vecteezy.com/system/resources/previews/069/282/385/non_2x/delicious-shawarma-wrap-with-vibrant-ingredients-image-free-photo.jpg") center/cover no-repeat fixed !important;
+}
+#persian-page #koobideh-section, #iranian-page #koobideh-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.rumispice.com/cdn/shop/articles/koobideh-kebabs-275194.jpg?v=1663802137") center/cover no-repeat fixed !important;
+}
+#persian-page #sabzi-polo-section, #iranian-page #sabzi-polo-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://bestofvegancom.b-cdn.net/wp-content/uploads/2022/03/Vegan-Sabzi-Polo-Ba-Mahi-1.jpeg") center/cover no-repeat fixed !important;
+}
+#palestinian-page #falafel-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://cdn.loveandlemons.com/wp-content/uploads/2019/09/falafel-1.jpg") center/cover no-repeat fixed !important;
+}
+#palestinian-page #musakhan-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://urbanfarmandkitchen.com/wp-content/uploads/2024/01/musakhan-rolls-sumac-chicken-8.jpg") center/cover no-repeat fixed !important;
+}
+#egyptian-page #koshari-section, #eqyptian-page #koshari-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.powerhungry.com/wp-content/uploads/2012/03/koshari.jpg") center/cover no-repeat fixed !important;
+}
+#egyptian-page #koshari-chicken-section, #eqyptian-page #koshari-chicken-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://gradfood.com/wp-content/uploads/2021/06/Koshari-2-scaled.jpg") center/cover no-repeat fixed !important;
+}
+#turkish-page #lentil-soup-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.afarmgirlsdabbles.com/wp-content/uploads/2021/02/Lentil-Soup-14_afarmgirlsdabbles_v_a.jpg") center/cover no-repeat fixed !important;
+}
+#turkish-page #doner-kebab-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/474x/c5/19/e5/c519e5bc624f77893f1eb32bf33885fb.jpg") center/cover no-repeat fixed !important;
+}
+
+#france-page #coq-au-vin-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://images.immediate.co.uk/production/volatile/sites/2/2022/04/Coq-au-vin-73b856b.jpg?resize=768,1152") center/cover no-repeat fixed !important;
+}
+#france-page #ratatouille-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://lacuisinedegeraldine.fr/wp-content/uploads/2025/06/Ratatouille-333-scaled.jpg") center/cover no-repeat fixed !important;
+}
+#spain-page #seafood-paella-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/474x/80/ac/a6/80aca6860f8e9c9a6cfcdf5927f4bf21.jpg?nii=t") center/cover no-repeat fixed !important;
+}
+#spain-page #tortilla-espanola-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.allrecipes.com/thmb/YLqC59-YtW8Ybcs29_WzeCU0h7A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/213226-tortilla-espanola-VAT-007-4x3-70f5f39a1d884375b7a0a5b8ef963e18.jpg") center/cover no-repeat fixed !important;
+}
+#greece-page #souvlaki-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.halfbakedharvest.com/wp-content/uploads/2025/07/Chicken-Souvlaki-Rice-Pilaf-1-scaled.jpg") center/cover no-repeat fixed !important;
+}
+#greece-page #greek-salad-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://cdn.loveandlemons.com/wp-content/uploads/opengraph/2019/07/greek-salad-2.jpg") center/cover no-repeat fixed !important;
+}
+#uk-page #fish-and-chips-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.ij.co.za/wp-content/uploads/25869c-FISH-AND-CHIPS-AIOLI-2.jpg") center/cover no-repeat fixed !important;
+}
+#uk-page #veggie-pie-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://images.immediate.co.uk/production/volatile/sites/2/2025/01/OliveSeasonalFebDauphinousePie001preview-b50166a.jpg") center/cover no-repeat fixed !important;
+}
+
+#new-zealand-page #boil-up-section, #maori-page #boil-up-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://www.angsarap.net/wp-content/uploads/2015/03/Boil-Up.jpg") center/cover no-repeat fixed !important;
+}
+#new-zealand-page #rewena-bread-section, #maori-page #rewena-bread-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/d0/fc/ec/d0fcecfb75c8491c8a63ed10bc95c6ea.jpg") center/cover no-repeat fixed !important;
+}
+#tongan-page #lu-pulu-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://cookinghawaiianstyle.com/wp-content/uploads/2025/10/Lu-Pulu-Recipe-by-Josh-Tatofi.webp") center/cover no-repeat fixed !important;
+}
+#tongan-page #poke-banana-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://pub-98a1285b876b4fe4a25eee057c4b232b.r2.dev/2021/04/banana-poke-cake-17.jpg") center/cover no-repeat fixed !important;
+}
+#cook-islands-page #ika-mata-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop") center/cover no-repeat fixed !important;
+}
+#cook-islands-page #lu-vegetable-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=600&auto=format&fit=crop") center/cover no-repeat fixed !important;
+}
+#samoan-page #oka-i-a-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://kara-coconut.com/wp-content/uploads/2019/01/Ota-ika.jpg") center/cover no-repeat fixed !important;
+}
+#samoan-page #sapa-sui-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://cdn.prod.website-files.com/63ca3639daa24262095b05af/63e392c696c94af6972e0e78_6256095b1d4b169a8187c39c_Sapa%20Sui_Sensei%20Farms-p-1080.jpg") center/cover no-repeat fixed !important;
+}
+#fijian-page #kokoda-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600&auto=format&fit=crop") center/cover no-repeat fixed !important;
+}
+#fijian-page #rourou-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://thumbs.dreamstime.com/b/delicious-rourou-dish-featuring-creamy-taro-leaves-fiji-steaming-bowl-showcases-flavored-aromatic-herbs-served-360614495.jpg") center/cover no-repeat fixed !important;
+}
+
+#nigerian-page #jollof-chicken-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://thumbs.dreamstime.com/b/west-african-entree-jollof-rice-overhead-view-dish-chicken-shito-sauce-boiled-egg-197234742.jpg") center/cover no-repeat fixed !important;
+}
+#nigerian-page #jollof-veg-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://heartfultable.com/wp-content/uploads/2025/11/vegan-jollof-rice-with-crispy-boottom.jpg") center/cover no-repeat fixed !important;
+}
+#kenya-page #nyama-choma-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://weeatatlast.com/wp-content/uploads/2022/08/nyama-choma-recipe.jpg") center/cover no-repeat fixed !important;
+}
+#kenya-page #ugali-veg-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://tastythriftytimely.com/wp-content/uploads/2025/06/Sukuma-Wiki-4.jpg") center/cover no-repeat fixed !important;
+}
+#ethopian-page #doro-wat-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://lowcarbcase.com/wp-content/uploads/2023/09/Doro-Wat-Spicy-Ethiopian-Chicken-Stew-IG-1.jpg") center/cover no-repeat fixed !important;
+}
+#ethopian-page #misir-wot-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://cdn.vegkit.com/wp-content/uploads/sites/2/2021/12/18170159/28772_ethiopian_lentils_full-1536x1210.jpg") center/cover no-repeat fixed !important;
+}
+#south-africa-page #bobotie-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://i.pinimg.com/736x/c6/5d/67/c65d6782e703af708ccc0579dd581f4e.jpg") center/cover no-repeat fixed !important;
+}
+#south-africa-page #chakalaka-section {
+   background: linear-gradient(rgba(45, 6, 12, 0.65), rgba(20, 3, 6, 0.9)), url("https://heleenmeyer.co.za/wp-content/uploads/2025/06/Homemade-chakalaka.jpg") center/cover no-repeat fixed !important;
+}
+#nigerian-page,  
+#kenya-page,
+#ethopian-page,
+#south-africa-page {
+ background: #4A0E17 !important;
+ display: block !important;
+ width: 100% !important;
+ min-height: 100vh !important;
+}
+
+.contact-segmented {
+ background: #4A0E17 !important;
+ width: 100%;
+ min-height: 100vh;
+ padding: 160px 6% 60px !important;
+ display: flex !important;
+ flex-direction: column !important;
+ align-items: center !important;
+}
+
+.contact-segmented .title-container .main-title {
+ font-size: 3rem !important;
+ color: #fff !important;
+ margin-bottom: 40px !important;
+ text-align: center !important;
+}
+
+.contact-split-container {
+ display: grid;
+ grid-template-columns: 1.1fr 1fr;
+ gap: 60px;
+ width: 100%;
+ max-width: 1100px;
+ align-items: stretch;
+}
+
+.contact-image-placeholder {
+ display: block;
+ width: 100%;
+ min-height: 450px;
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ border-radius: 8px;
+ overflow: hidden;
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+ background: #3A0A11;
+}
+
+.contact-image-placeholder iframe {
+ width: 100% !important;
+ height: 100% !important;
+ border: 0;
+}
+
+.contact-form-box {
+ width: 100%;
+ background: transparent !important;
+ border: none !important;
+ box-shadow: none !important;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.contact-form-box .form-group {
+ margin-bottom: 25px;
+ width: 100%;
+}
+
+.contact-form-box .form-group:last-of-type {
+ margin-bottom: 30px;
+ flex-grow: 1;
+ display: flex;
+ flex-direction: column;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+ width: 100% !important;
+ padding: 16px 20px !important;
+ border-radius: 6px !important;
+ border: 1px solid rgba(255, 255, 255, 0.15) !important;
+ background: #3A0A11 !important;
+ color: #ffffff !important;
+ font: bold 0.85rem "Montserrat", sans-serif !important;
+ text-transform: uppercase !important;
+ letter-spacing: 1px !important;
+ transition: all 0.3s ease;
+}
+
+.contact-form-box textarea {
+ height: 100% !important;
+ min-height: 220px !important;
+ resize: none !important;
+}
+
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder {
+ color: rgba(255, 255, 255, 0.4) !important;
+ font: bold 0.85rem "Montserrat", sans-serif !important;
+ text-transform: uppercase !important;
+ letter-spacing: 1px !important;
+}
+
+.contact-form-box button {
+ width: 100%;
+ padding: 18px;
+ background: transparent;
+ border: 2px solid rgba(255, 191, 145, 0.4);
+ color: #ffffff;
+ font: bold 0.85rem "Montserrat", sans-serif !important;
+ text-transform: uppercase !important;
+ letter-spacing: 2px;
+ cursor: pointer;
+ border-radius: 6px;
+ transition: all 0.3s ease;
+ margin-top: auto;
+}
+
+.contact-form-box button:hover {
+ background: #ffbf91;
+ color: #4A0E17;
+ border-color: #ffbf91;
+}
+
+#form-success-message {
+ display: none;
+ margin-top: 15px;
+ font-family: 'Montserrat', sans-serif;
+ color: #ffbf91;
+ text-align: center;
+ font-size: 1.05rem;
+ line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+ .hero-section {
+   grid-template-columns: 1fr;
+   height: auto;
+   min-height: 100vh;
+   padding: 160px 6% 60px;
+   gap: 40px;
+ }
+
+ .hero-text-container {
+   height: auto;
+   text-align: center;
+ }
+
+ .hero-title {
+   font-size: 4rem;
+ }
+
+ .hero-statement {
+   margin: 0 auto;
+ }
+
+ .hero-footer {
+   justify-content: center;
+ }
+
+ .hero-right-container {
+   justify-content: center;
+ }
+
+ .cuisines-grid {
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+ }
+
+ .recipe-split-container {
+   grid-template-columns: 1fr !important;
+   gap: 40px !important;
+   padding-top: 140px !important;
+ }
+
+ .recipe-hero-side {
+   align-items: center !important;
+   text-align: center !important;
+ }
+  .recipe-hero-title {
+   font-size: 4rem !important;
+ }
+
+ .contact-split-container {
+   grid-template-columns: 1fr;
+   gap: 40px;
+   max-width: 650px;
+ }
+ 
+ .contact-image-placeholder {
+   min-height: 350px;
+ }
+}
+
+@media (max-width: 768px) {
+ header,
+ header.main-nav-header {
+   position: fixed !important;
+   flex-direction: column !important;
+   gap: 15px !important;
+   padding: 15px 4% !important;
+   text-align: center !important;
+ }
+
+ header .nav-links {
+   flex-wrap: wrap !important;
+   justify-content: center !important;
+   gap: 10px 20px !important;
+   order: 2 !important;
+   width: 100% !important;
+ }
+
+ #index-page-body #home footer {
+   position: static !important;
+   padding: 0 !important;
+   margin-bottom: 5px !important;
+   display: flex !important;
+   flex-direction: column !important;
+   justify-content: center !important;
+   align-items: center !important;
+   width: auto !important;
+   background: transparent !important;
+   border: none !important;
+   box-shadow: none !important;
+   order: 1 !important;
+ }
+
+ #index-page-body #home .footer-logo {
+   margin-top: 0 !important;
+   max-width: 100px !important;
+ }
+
+ .hero-title {
+   font-size: 2.8rem;
+ }
+
+ .cuisines-grid {
+   grid-template-columns: repeat(2, 1fr);
+ }
+
+ .section-title {
+   font-size: 2.8rem;
+   text-align: center;
+   margin-bottom: 40px;
+ }
+
+ .recipe-grid {
+   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+   gap: 15px !important;
+ }
+  .recipe-hero-title {
+   font-size: 3rem !important;
+ }
+  .recipe-split-container {
+   padding-top: 180px !important;
+ }
+}
+
+@media (max-width: 480px) {
+ .cuisines-grid {
+   grid-template-columns: 1fr;
+   text-align: center;
+ }
+  .glass-nav {
+   padding: 40px 20px;
+ }
+}
