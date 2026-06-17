@@ -48,6 +48,7 @@ header,
  z-index: 99999 !important;
  background: rgba(74, 14, 23, 0.98) !important;
  backdrop-filter: blur(10px) !important;
+ -webkit-backdrop-filter: blur(10px) !important;
  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -161,6 +162,7 @@ header .nav-links a:hover {
 .glass-nav {
  background: rgba(255, 191, 145, 0.18);
  backdrop-filter: blur(16px);
+ -webkit-backdrop-filter: blur(16px);
  border: 1px solid rgba(255, 255, 255, 0.2);
  border-radius: 24px;
  padding: 60px 45px;
@@ -343,6 +345,7 @@ main {
  height: 22%;
  background: rgba(255, 191, 145, 0.15);
  backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
  border-top: 1px solid rgba(255, 255, 255, 0.15);
  color: #fff;
  display: flex;
@@ -437,6 +440,7 @@ main {
  max-width: 600px;
  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
  backdrop-filter: none !important;
+ -webkit-backdrop-filter: none !important;
 }
 
 .recipe-meta-clean {
@@ -807,7 +811,7 @@ footer .footer-osc-logo,
 .contact-form-box button:hover {
  background: #ffbf91;
  color: #4A0E17;
- border-color: transparent;
+ border-color: #ffbf91;
 }
 
 #form-success-message {
@@ -952,4 +956,4 @@ footer .footer-osc-logo,
   .glass-nav {
    padding: 40px 20px;
  }
-}
+} 
